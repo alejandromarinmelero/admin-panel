@@ -1,0 +1,54 @@
+.note {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+
+    .blog-img {
+        padding: 0 1rem 0 1rem;
+        min-height: 50vh;
+        width: 100%;
+        background-image: url('../../../public/assets/images/entrada-blog.jpg');
+        background-repeat: no-repeat;
+        background-position:unset;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .title-and-date {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+
+        h1 {
+            padding: 1rem;
+            width: 80%;
+            border-bottom: 1px solid rgb(184, 184, 184);
+        }
+    }
+
+   
+
+    p {
+        width: 80%;
+        text-align: justify;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    .note {
+    
+        .blog-img {
+            display: none;
+        }
+    
+        .title-and-date {
+            margin-top: 4rem;
+        }
+    }
+}

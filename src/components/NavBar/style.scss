@@ -1,0 +1,135 @@
+.nav-bar {
+    background-color: #12212B;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    .logo {
+        padding: 0.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: #1E3748;
+
+        img {
+            width: 30px;
+        }
+
+        h3 {
+            color: #EFF6E0;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    }
+
+    .navbar-user {
+        display: grid;
+        grid-template-rows: 30px 30px 30px;
+        justify-items: center;
+        align-items: center;
+        margin: 0 auto;
+
+        img {
+            width: 50px;
+        }
+
+        span {
+            margin-top: 2rem;
+            color: #fff;
+        }
+    }
+
+    .nav-elements {
+        padding: 1rem;
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 3.5rem;
+
+        .nav-title {
+            font-size: 0.8rem;
+            font-weight: 200;
+            color: #868686;
+        }
+
+        .nav-links {
+            padding: 0;
+            width: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 1rem;
+
+            .nav-link {
+                color: #fff;
+                transition: all 0.2s ease-in-out;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 0.7rem;
+                padding: 0;
+                margin: 0;
+
+                span {
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    margin-left: 2rem;
+                }
+
+                &:hover {
+                    color: #598392;
+                }
+
+                img {
+                    width: 25px;
+                    position: absolute;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-bar {
+
+        .navbar-user {
+            display: none;
+        }
+
+        .logo {
+            h3 {
+                display: none;
+            }
+            justify-content: center;
+        }
+
+        .nav-elements {
+            padding: 0.6rem;
+
+            span {
+                display: none;
+            }
+
+            .nav-links {
+                gap: 3rem;
+                display:contents;
+            }
+        }
+    }
+}

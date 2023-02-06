@@ -1,0 +1,178 @@
+.home {
+    padding: 1.3rem;
+    width: 98.3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .home-header {
+        text-align: left;
+        font-size: 2rem;
+        width: 100%;
+        color: #035d81;
+        font-weight: 600;
+
+        span {
+            color: #8f9287;
+            font-size: 0.7rem;
+            margin-left: 1rem;
+        }
+    }
+
+    .section-one {
+        margin-top: 2rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        align-items: flex-start;
+
+        .accordions {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 1rem;
+
+            .accordion {
+                width: 90%;
+
+                .accordion-header {
+
+                    --bs-accordion-active-bg: none;
+
+                    button {
+                        padding: 0.5rem 1rem 0.5rem 1rem;
+                        color: #022531;
+                        font-weight: 600;
+
+                        &:not(.collapsed)::after {
+                            background-image: url('https://img.icons8.com/ios-filled/50/035d81/expand-arrow--v1.png');
+                            transform: 'https://img.icons8.com/ios-filled/50/035d81/expand-arrow--v1.png';
+                        }
+
+                        &::after {
+                            background-image: url('https://img.icons8.com/ios-filled/50/035d81/expand-arrow--v1.png');
+                        }
+
+                        &:focus {
+                            border: 1px solid #022531;
+                            box-shadow: none;
+                        }
+                    }
+
+                    &::after {
+                        color: #022531;
+                    }
+                }
+
+                .accordion-body {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+
+                    span {
+                        font-weight: 600;
+                        color: #022531;
+                    }
+                }
+            }
+
+
+            .card-notes {
+                width: 90%;
+
+                .card-body {
+                    padding: 1rem;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-end;
+                    gap: 2rem;
+                }
+                
+                .card-text {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                }
+
+                span {
+                    font-size: 2rem;
+                    font-weight: 600;
+                    border: none;
+                }
+
+                .card-header {
+                    background-color: #073B4C;
+                    color: #EFF6E0;
+                }
+
+                .card-body {
+                    color: #fff;
+                    background-color: #073B4C;
+
+                }
+
+                .card-footer {
+                    color: #fff;
+                    background-color: #022531;
+                    text-align: left;
+                    border: none;
+                }
+            }
+
+        }
+
+        .calendar {
+
+            display: flex;
+            justify-content: space-between;
+            flex-flow: row wrap;
+            align-items: flex-start;
+            flex-grow: 1;
+            gap: 1rem;
+
+            .card-calendar {
+
+                .card-header {
+                    background-color: #598392;
+                    color: #EFF6E0;
+                }
+
+                .card-body {
+                    padding: 0;
+
+                    .calendar {
+                        background-color: #DAE4E7;
+                        border: none;
+                        width: 100%;
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    .home {
+        .section-one {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+
+            .accordions {
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            
+        }
+    }
+}
